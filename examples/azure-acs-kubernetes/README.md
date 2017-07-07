@@ -7,7 +7,7 @@ Create a Kubernetes cluster in Azure using the Azure Container Service. This is 
 
 ### Setting up Terraform Access to Azure
 
-To enable Terraform to provision resources into Azure, you need to create two entities in Azure Active Directory (AAD) - AAD Application and AAD Service Principal. (Azure CLI 2.0)[https://docs.microsoft.com/en-us/cli/azure/install-azure-cli] allows you to quickly provision both by following the instructions below. 
+To enable Terraform to provision resources into Azure, you need to create two entities in Azure Active Directory (AAD) - AAD Application and AAD Service Principal. [Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) allows you to quickly provision both by following the instructions below. 
 
 First, login to administer your azure subscription by issuing the following command
 
@@ -42,7 +42,7 @@ az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/${SUBSCRI
 
 This outputs your client_id (appId), client_secret (password), sp_name, and tenant. Take note of all these variables. Use the returned `appId` value for the `service_principal_client_id` variable in `terraform.tfvars`. Use the password value for the `service_principal_client_secret` variable in `terraform.tfvars`.
 
-NOTE: instead of inserting these values into a `terraform.tfvars` file, you can set corresponding environment variables as described in detail on (docs.microsoft.com)[https://docs.microsoft.com/en-us/azure/virtual-machines/terraform-install-configure].
+NOTE: instead of inserting these values into a `terraform.tfvars` file, you can set corresponding environment variables as described in detail on [docs.microsoft.com](https://docs.microsoft.com/en-us/azure/virtual-machines/terraform-install-configure).
 
 ### Generate an ssh key
 
@@ -80,7 +80,7 @@ terraform apply
 ```
 
 ## Optional: configure automated tests/CI environment with Travis CI
-In the samples folder, files deploy.ci.sh and deploy.mach.sh are not part of Terraform deployments but rather a part of the continuous integration environment and automated tests that have been setup to validate successful resource deployment. You can setup your own continuous integration environment on (Travis CI)[https://travis-ci.org] by modifying travis.yaml to run deploy.ci.sh scripts upon successful code push.
+In the samples folder, files deploy.ci.sh and deploy.mach.sh are not part of Terraform deployments but rather a part of the continuous integration environment and automated tests that have been setup to validate successful resource deployment. You can setup your own continuous integration environment on [Travis CI](https://travis-ci.org) by modifying travis.yaml to run deploy.ci.sh scripts upon successful code push.
 
 ## Further information
 
