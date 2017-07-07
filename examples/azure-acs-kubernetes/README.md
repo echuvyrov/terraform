@@ -5,7 +5,7 @@ Create a Kubernetes cluster in Azure using the Azure Container Service. This is 
 ## Pre-requisites
 
 
-###Setting up Terraform Access to Azure
+### Setting up Terraform Access to Azure
 
 To enable Terraform to provision resources into Azure, you need to create two entities in Azure Active Directory (AAD) - AAD Application and AAD Service Principal. (Azure CLI 2.0)[https://docs.microsoft.com/en-us/cli/azure/install-azure-cli] allows you to quickly provision both by following the instructions below. 
 
