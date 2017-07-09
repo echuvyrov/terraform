@@ -73,7 +73,15 @@ Once you complete the pre-requisites and fill in all the variables in `terraform
 terraform init
 ```
 
-to initialize Azure provider. Then run the following command:
+to initialize Azure provider. 
+
+To see the changes that will be made to your infrastructure (without actually applying them), run the following command
+
+```
+terraform plan
+```
+
+To apply changes to your infrastructure, run the following command:
 
 ```
 terraform apply
